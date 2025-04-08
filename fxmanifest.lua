@@ -8,9 +8,9 @@ name 'stark_lockbox'
 
 author 'Adam Biegert'
 
-version '2.1.0'
+version '2.2.0'
 
-description 'A Lockbox Script for Qbox & QBCore'
+description 'A Vehicle Lockbox Script for Qbox & QBCore'
 
 shared_script {
     'config.lua',

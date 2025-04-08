@@ -47,24 +47,24 @@ if Config.framework == 'qb' then
         local id = GetVehicleNumberPlateText(Vehicle)
 
         if Config.inventory == 'oldQB' then
-            TriggerServerEvent("inventory:server:OpenInventory", "stash", "DPS Lockbox " .. id, {
+            TriggerServerEvent("inventory:server:OpenInventory", "stash", "Vehicle Lockbox " .. id, {
                 maxweight = Config.lockboxWeight,
                 slots = Config.lockboxSlots
             })
-            TriggerEvent("inventory:client:SetCurrentStash", "DPS Lockbox " .. id)
+            TriggerEvent("inventory:client:SetCurrentStash", "Vehicle Lockbox " .. id)
         elseif Config.inventory == 'newQB' then
-            local stashLabel = "DPS Lockbox " .. id
+            local stashLabel = "Vehicle Lockbox " .. id
             TriggerServerEvent('stark_lockbox:server:openLockBox', stashLabel)
         elseif Config.inventory == 'ps' then
-            TriggerServerEvent("ps-inventory:server:OpenInventory", "stash", "DPS Lockbox " .. id {
+            TriggerServerEvent("ps-inventory:server:OpenInventory", "stash", "Vehicle Lockbox " .. id {
                 maxweight = Config.lockboxWeight,
                 slots = Config.lockboxSlots
             })
-            TriggerEvent("ps-inventory:client:SetCurrentStash", "DPS Lockbox " ..  id)
+            TriggerEvent("ps-inventory:client:SetCurrentStash", "Vehicle Lockbox " ..  id)
 
         elseif Config.inventory == 'ox' then
             local ox_inventory = exports.ox_inventory
-            ox_inventory:openInventory('stash', 'dps_lockbox')
+            ox_inventory:openInventory('stash', 'vehicle_lockbox')
 
         else
             if Config.notify == 'qb' then
@@ -198,7 +198,7 @@ if Config.framework == 'qbx' then
             })
         else
             local ox_inventory = exports.ox_inventory
-            ox_inventory:openInventory('stash', 'dps_lockbox')
+            ox_inventory:openInventory('stash', 'vehicle_lockbox')
         end
     end
 
