@@ -7,4 +7,4 @@ Add The Following Snippet Of Code To Your qbx_radialmenu\config\client.lua in th
                 event = 'stark_lockbox:client:openLockBox',
             },
 
-Depending upon your configuration, this should be placed right around lines 237 and 361.
+Depending upon your configuration, this should be placed right around lines 237 and 353.
