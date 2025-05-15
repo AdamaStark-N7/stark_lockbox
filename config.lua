@@ -1,5 +1,7 @@
 Config = Config or {}
 
+Config.versionCheck = 'true' -- 'true' or 'false'
+
 Config.framework = 'qb' -- supported: 'qb' or 'qbx'
 
 Config.notify = 'qb' -- supported: 'qb' or 'ox'
