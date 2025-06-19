@@ -1,5 +1,7 @@
 fx_version 'cerulean'
 
+use_experimental_fxv2_oal 'yes'
+
 lua54 'yes'
 
 game 'gta5'
@@ -8,7 +10,7 @@ name 'stark_lockbox'
 
 author 'Adama Stark'
 
-version '2.2.2'
+version '2.3.0'
 
 description 'A Vehicle Lockbox Script for Qbox & QBCore'
 
