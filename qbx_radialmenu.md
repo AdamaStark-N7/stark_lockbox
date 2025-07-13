@@ -10,4 +10,4 @@ Add The Following Snippet Of Code To Your qbx_radialmenu\config\client.lua in bo
             },
 ```
 
-Depending upon your configuration, this should be placed right around line 237 and line 353.
+Depending upon your configuration, this should be placed right around line 236 and line 353.
