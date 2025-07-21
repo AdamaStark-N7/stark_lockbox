@@ -58,7 +58,7 @@ if Config.framework == 'qb' then
             local stashLabel = "Vehicle Lockbox " .. id
             TriggerServerEvent('stark_lockbox:server:openLockBox', stashLabel)
         elseif Config.inventory == 'ps' then
-            TriggerServerEvent("ps-inventory:server:OpenInventory", "stash", "Vehicle Lockbox " .. id {
+            TriggerServerEvent("ps-inventory:server:OpenInventory", "stash", "Vehicle Lockbox " .. id, {
                 maxweight = Config.lockboxWeight,
                 slots = Config.lockboxSlots
             })
