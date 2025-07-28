@@ -18,7 +18,7 @@ description 'A Vehicle Lockbox Script for Qbox & QBCore'
 
 ox_lib 'locale'
 
-shared_script {
+shared_scripts {
     'config.lua',
     '@ox_lib/init.lua',
 }
