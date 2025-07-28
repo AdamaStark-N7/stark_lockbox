@@ -6,7 +6,7 @@ lua54 'yes'
 
 game 'gta5'
 
-name 'stark_lockbox_v3'
+name 'stark_lockbox'
 
 author 'Adama Stark'
 
