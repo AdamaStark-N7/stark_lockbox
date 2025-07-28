@@ -6,29 +6,37 @@ lua54 'yes'
 
 game 'gta5'
 
-name 'stark_lockbox'
+name 'stark_lockbox_v3'
 
 author 'Adama Stark'
 
-version '2.3.0'
+version '3.0.0'
 
 repository 'https://github.com/AdamaStark-N7/stark_lockbox'
 
 description 'A Vehicle Lockbox Script for Qbox & QBCore'
 
+ox_lib 'locale'
+
 shared_script {
     'config.lua',
     '@ox_lib/init.lua',
-    -- '@lation_ui/init.lua'
 }
 
 client_scripts {
     'bridge/client/**.lua',
     'client/*.lua',
-    -- '@qbx_core/modules/playerdata.lua' -- For Use With The Qbox Framework, Can Be Commented Out or Removed If Not Used
 }
 
 server_scripts {
     'bridge/server/**.lua',
     'server/*.lua'
+}
+
+files {
+    'locales/*.json',
+}
+
+dependency {
+    'ox_lib'
 }

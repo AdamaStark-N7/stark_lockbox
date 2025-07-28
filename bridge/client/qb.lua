@@ -1,11 +1,15 @@
+---@diagnostic disable: lowercase-global
+
 if GetResourceState('qb-core') ~= 'started' or GetResourceState('qbx_core') == 'started' then return end
 
 local QBCore = exports['qb-core']:GetCoreObject()
 
 function qbCheckValidPoliceJob()
-    local currentJob = QBCore.Functions.GetPlayerData().job
-    if currentJob == nil then return false end
-    for i, job in ipairs(Config.leoJobs) do
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if not PlayerData then return false end
+    local currentJob = PlayerData.job
+    if not currentJob then return false end
+    for _, job in ipairs(Config.PoliceJobs) do
         if (currentJob.name == job) then
             return true
         end
@@ -14,9 +18,11 @@ function qbCheckValidPoliceJob()
 end
 
 function qbCheckValidAmbulanceJob()
-    local currentJob = QBCore.Functions.GetPlayerData().job
-    if currentJob == nil then return false end
-    for j, job in ipairs(Config.emsJobs) do
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if not PlayerData then return false end
+    local currentJob = PlayerData.job
+    if not currentJob then return false end
+    for _, job in ipairs(Config.AmbulanceJobs) do
         if (currentJob.name == job) then
             return true
         end

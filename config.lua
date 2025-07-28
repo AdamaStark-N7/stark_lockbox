@@ -1,40 +1,45 @@
 Config = Config or {}
 
-Config.versionCheck = 'true' -- 'true' or 'false'
+Config.VersionCheck = true
 
-Config.framework = 'qb' -- supported: 'qb' or 'qbx'
+Config.Framework = 'qb' -- supported: 'qb' or 'qbx'
 
-Config.notify = 'qb' -- supported: 'qb' or 'ox'
+Config.Notify = 'qb'    -- supported: 'qb', 'ox', or 'lation'
 
-Config.inventory = 'ox' -- supported: 'oldQB', 'newQB', 'ps', or 'ox' (QBCore Only)
+Config.Inventory = 'qb' -- supported: 'qb', 'ox', or 'ps'
 
-Config.progress = {
-    enabled = 'true', -- 'true' or 'false'
+Config.Radial = 'qb'    -- supported: 'qb' or 'ox'
 
-    type = 'ox', -- supported: 'qb' or 'ox'
-
-    duration = 2500 -- How long, in ms, before the lockbox opens
-}
-
-Config.qbxProgress = {
-    enabled = 'false', -- For Use With QBox Framework, Set To 'false' If Not Using QBox
+Config.Progress = {
+    enabled = true,
+    type = 'qb', -- supported: 'qb', 'ox_bar', 'ox_circle', or 'lation'
     duration = 2500
 }
 
-Config.lockboxSlots = 5 -- Recommended Value, Could Be Higher or Lower Depending On Server Needs
+Config.qbxProgress = {
+    enabled = false,
+    type = 'ox_bar', -- supported: 'ox_bar', 'ox_circle', or 'lation'
+    duration = 2500
+}
 
-Config.lockboxWeight = 120000 -- Recommended Value, Could Be Higher or Lower Depending On Server Needs
+Config.LockboxSlots = 5
 
-Config.leoJobs = {
+Config.LockboxWeight = 120000
+
+Config.PoliceJobs = {
     'police',
     'lssd',
-    'sast',
-    'bcso',
     'sasp',
+    'bcso',
+    'sast',
     -- add your server's police job here as found in qb-core/shared/jobs.lua or qbx_core/shared/jobs.lua
 }
 
-Config.emsJobs = {
+Config.AmbulanceJobs = {
     'ambulance',
     -- add your server's ambulance job here as found in qb-core/shared/jobs.lua or qbx_core/shared/jobs.lua
 }
+
+Config.EnableMenu = true
+
+Config.MenuUI = 'qb' -- supported: 'qb', 'ox', or 'lation'
