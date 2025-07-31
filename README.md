@@ -75,5 +75,8 @@ Stark Lockbox is a resource that allows both LEO & EMS to utilize a locking stor
 ## Lation Modern UI Progress Bar
 ![Preview: Lation Modern UI Progress Bar](https://r2.fivemanage.com/BZUhJPECnmtuNrWqUmCYy/FiveM_GTAProcess_6x9cOLwyCc.jpg)
 
+## QB Inventory
+![Preview: QB Inventory Vehicle Locbox](https://r2.fivemanage.com/BZUhJPECnmtuNrWqUmCYy/FiveM_b3407_GTAProcess_msZDAg5HME.jpg)
+
 ## Ox Inventory
 ![Preview: Ox Inventory Vehicle Lockbox](https://r2.fivemanage.com/BZUhJPECnmtuNrWqUmCYy/FiveM_GTAProcess_UqHip3pCOx.jpg)

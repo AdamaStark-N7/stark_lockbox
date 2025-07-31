@@ -10,7 +10,7 @@ local ox_inventory = exports.ox_inventory
 
 if Config.Inventory == 'qb' then
     if qbInvState == 'started' and GetCurrentResourceName() then
-        RegisterNetEvent('stark_lockbox:server:OpenLockbox', function(source, stashLabel)
+        RegisterNetEvent('stark_lockbox:server:OpenLockbox', function(stashLabel)
             local src = source
             exports['qb-inventory']:OpenInventory(src, stashLabel, {
                 maxweight = Config.LockboxWeight,
