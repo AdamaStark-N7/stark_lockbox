@@ -32,11 +32,12 @@ Config.PoliceJobs = {
     'sasp',
     'bcso',
     'sast',
+    'lscso'
     -- add your server's police job here as found in qb-core/shared/jobs.lua or qbx_core/shared/jobs.lua
 }
 
 Config.AmbulanceJobs = {
-    'ambulance',
+    'ambulance'
     -- add your server's ambulance job here as found in qb-core/shared/jobs.lua or qbx_core/shared/jobs.lua
 }
 

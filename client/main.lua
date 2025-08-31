@@ -1,6 +1,6 @@
 ---@diagnostic disable: lowercase-global
 
-if not lib.checkDependency('ox_lib', '3.30.0', true) then return end
+if not lib.checkDependency('ox_lib', '3.31.0', true) then return end
 
 if Config.Framework == 'qb' then
     local QBCore = exports['qb-core']:GetCoreObject()
