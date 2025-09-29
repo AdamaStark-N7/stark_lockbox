@@ -55,10 +55,10 @@ Stark Lockbox is a resource that allows both LEO & EMS to utilize a locking stor
 # Previews
 
 ## QB Radial Menu
-![Preview: QB Radial Menu](https://r2.fivemanage.com/BZUhJPECnmtuNrWqUmCYy/FiveM_GTAProcess_V5nLh1lX2a.jpg)
+![Preview: QB Radial Menu](https://r2.fivemanage.com/BZUhJPECnmtuNrWqUmCYy/QB_RadialMenu_Preview.jpg)
 
 ## Ox Lib Radial Menu
-![Preview: Ox Lib Radial Menu](https://r2.fivemanage.com/BZUhJPECnmtuNrWqUmCYy/FiveM_GTAProcess_dnfm5NHKdO.jpg)
+![Preview: Ox Lib Radial Menu](https://r2.fivemanage.com/BZUhJPECnmtuNrWqUmCYy/Ox_Lib_RadialMenu_Preview.jpg)
 
 ## QB Menu
 ![Preview: QB Menu](https://r2.fivemanage.com/BZUhJPECnmtuNrWqUmCYy/FiveM_GTAProcess_tzUq7qci0m.jpg)
