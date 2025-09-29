@@ -2,23 +2,23 @@ Config = Config or {}
 
 Config.VersionCheck = true
 
-Config.Framework = 'qb' -- supported: 'qb' or 'qbx'
+Config.Framework = 'qbx' -- supported: 'qb' or 'qbx'
 
-Config.Notify = 'qb'    -- supported: 'qb', 'ox', or 'lation'
+Config.Notify = 'ox'     -- supported: 'qb', 'ox', or 'lation'
 
-Config.Inventory = 'qb' -- supported: 'qb', 'ox', or 'ps'
+Config.Inventory = 'ox'  -- supported: 'qb', 'ox', or 'ps'
 
-Config.Radial = 'qb'    -- supported: 'qb' or 'ox'
+Config.Radial = 'ox'     -- supported: 'qb' or 'ox'
 
 Config.Progress = {
-    enabled = true,
+    enabled = false,
     type = 'qb', -- supported: 'qb', 'ox_bar', 'ox_circle', or 'lation'
     duration = 2500
 }
 
 Config.qbxProgress = {
-    enabled = false,
-    type = 'ox_bar', -- supported: 'ox_bar', 'ox_circle', or 'lation'
+    enabled = true,
+    type = 'ox_circle', -- supported: 'ox_bar', 'ox_circle', or 'lation'
     duration = 2500
 }
 
@@ -43,4 +43,4 @@ Config.AmbulanceJobs = {
 
 Config.EnableMenu = true
 
-Config.MenuUI = 'qb' -- supported: 'qb', 'ox', or 'lation'
+Config.MenuUI = 'ox' -- supported: 'qb', 'ox', or 'lation'
