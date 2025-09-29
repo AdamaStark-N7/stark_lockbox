@@ -24,7 +24,7 @@ if Config.Inventory == 'ox' then
     if oxInvState == 'started' and GetCurrentResourceName() then
         local lockbox = {
             id = 'vehicle_lockbox',
-            label = 'Vehicle Lockbox',
+            label = locale('info.inventory_label'),
             slots = Config.LockboxSlots,
             weight = Config.LockboxWeight,
             owner = true
