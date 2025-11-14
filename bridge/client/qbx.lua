@@ -2,6 +2,8 @@
 
 if GetResourceState('qbx_core') ~= 'started' then return end
 
+local Config = require 'shared.config'
+
 local QBX = exports.qbx_core
 
 function qbxCheckValidPoliceJob()

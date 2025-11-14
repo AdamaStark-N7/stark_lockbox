@@ -19,6 +19,7 @@
     },
 
     "info": {
+        "command_help": "Opens The Secured Vehicle Lockbox",
         "inventory_label": "Vehicle Lockbox",
         "radial_menu_title": "Open Lockbox",
         "vehicle_lockbox_menu_title": "Vehicle Lockbox",

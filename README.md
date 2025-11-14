@@ -48,7 +48,7 @@ Stark Lockbox is a resource that allows both LEO & EMS to utilize a locking stor
 
 # Dependencies
 1. ox_lib
-2. qb-radialmenu, qbx_radialmenu, or ox lib radial menu
+2. qb-radialmenu, qbx_radialmenu, ox lib radial menu, or Lation Modern UI Radial Menu
 3. qb-inventory or ps-inventory (QBCore)
 4. ox_inventory (QBCore or Qbox)
 
@@ -59,6 +59,9 @@ Stark Lockbox is a resource that allows both LEO & EMS to utilize a locking stor
 
 ## Ox Lib Radial Menu
 ![Preview: Ox Lib Radial Menu](https://r2.fivemanage.com/BZUhJPECnmtuNrWqUmCYy/Ox_Lib_RadialMenu_Preview.jpg)
+
+## Lation Modern UI Radial Menu
+![Preview: Lation Modern UI Radial Menu](https://r2.fivemanage.com/BZUhJPECnmtuNrWqUmCYy/FiveM_b3407_GTAProcess_ulaPDvwUth.jpg)
 
 ## QB Menu
 ![Preview: QB Menu](https://r2.fivemanage.com/BZUhJPECnmtuNrWqUmCYy/FiveM_GTAProcess_tzUq7qci0m.jpg)

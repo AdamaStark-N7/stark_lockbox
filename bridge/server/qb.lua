@@ -1,6 +1,8 @@
 if GetResourceState('qb-core') ~= 'started' or GetResourceState('qbx_core') == 'started' then return end
 
-if not lib.checkDependency('ox_lib', '3.31.0', true) then return end
+if not lib.checkDependency('ox_lib', '3.32.0', true) then return end
+
+local Config = require 'shared.config'
 
 local qbInvState = GetResourceState('qb-inventory')
 
@@ -39,7 +41,7 @@ if Config.Inventory == 'ox' then
 end
 
 lib.addCommand('lockbox', {
-    help = 'Opens The Secured Vehicle Lockbox',
+    help = locale('info.command_help'),
     restricted = false,
 }, function(source)
     TriggerClientEvent('stark_lockbox:client:OpenLockbox', source)

@@ -2,6 +2,8 @@
 
 if not lib.checkDependency('ox_lib', '3.32.0', true) then return end
 
+local Config = require 'shared.config'
+
 if Config.Framework == 'qb' then
     local QBCore = exports['qb-core']:GetCoreObject()
 
@@ -21,8 +23,20 @@ if Config.Framework == 'qb' then
                 id = 'open_lock_box',
                 icon = 'fa-solid fa-lock',
                 label = locale('info.radial_menu_title'),
-                onSelect = 'OpenLockbox',
+                onSelect = function()
+                    TriggerEvent('stark_lockbox:client:OpenLockbox')
+                end,
                 keepOpen = false
+            })
+        elseif Config.Radial == 'lation' then
+            exports.lation_ui:addRadialItem({
+                id = 'open_lock_box',
+                label = locale('info.radial_menu_title'),
+                icon = 'fa-solid fa-lock',
+                iconColor = '#FFFFFF',
+                onSelect = function()
+                    TriggerEvent('stark_lockbox:client:OpenLockbox')
+                end,
             })
         else
             if Config.Notify == 'qb' then
@@ -60,18 +74,24 @@ if Config.Framework == 'qb' then
                     MenuItemId = nil
                 elseif Config.Radial == 'ox' then
                     lib.removeRadialItem('open_lock_box')
+                elseif Config.Radial == 'lation' then
+                    exports.lation_ui:removeRadialItem('open_lock_box')
                 end
             elseif MenuItemId ~= nil then
                 exports['qb-radialmenu']:RemoveOption(MenuItemId)
                 MenuItemId = nil
             elseif Config.Radial == 'ox' then
                 lib.removeRadialItem('open_lock_box')
+            elseif Config.Radial == 'lation' then
+                exports.lation_ui:removeRadialItem('open_lock_box')
             end
         elseif MenuItemId ~= nil then
             exports['qb-radialmenu']:RemoveOption(MenuItemId)
             MenuItemId = nil
         elseif Config.Radial == 'ox' then
             lib.removeRadialItem('open_lock_box')
+        elseif Config.Radial == 'lation' then
+            exports.lation_ui:removeRadialItem('open_lock_box')
         end
     end
 
@@ -79,7 +99,7 @@ if Config.Framework == 'qb' then
         updateRadial()
     end)
 
-    if Config.Radial == 'ox' then
+    if Config.Radial == 'ox' or Config.Radial == 'lation' then
         lib.onCache('vehicle', function()
             updateRadial()
         end)
@@ -462,25 +482,50 @@ if Config.Framework == 'qb' then
             end
         end
     end)
-
-    if Config.Radial == 'ox' then
-        exports('OpenLockbox', function()
-            TriggerEvent('stark_lockbox:client:OpenLockbox')
-        end)
-    end
-
 end
 
 if Config.Framework == 'qbx' then
     local function oxAddRadialLockboxOption()
         local Player = PlayerPedId()
-        lib.addRadialItem({
-            id = 'open_lock_box',
-            icon = 'fa-solid fa-lock',
-            label = locale('info.radial_menu_title'),
-            onSelect = 'OpenLockbox',
-            keepOpen = false
-        })
+        if Config.Radial == 'ox' then
+            lib.addRadialItem({
+                id = 'open_lock_box',
+                icon = 'fa-solid fa-lock',
+                label = locale('info.radial_menu_title'),
+                onSelect = function()
+                    TriggerEvent('stark_lockbox:client:OpenLockbox')
+                end,
+                keepOpen = false
+            })
+        elseif Config.Radial == 'lation' then
+            exports.lation_ui:addRadialItem({
+                id = 'open_lock_box',
+                label = locale('info.radial_menu_title'),
+                icon = 'fa-solid fa-lock',
+                iconColor = '#FFFFFF',
+                onSelect = function()
+                    TriggerEvent('stark_lockbox:client:OpenLockbox')
+                end,
+            })
+        else
+            if Config.Notify == 'ox' then
+                lib.notify({
+                    title = locale('error.unsupported_radial_menu_title'),
+                    description = locale('error.unsupported_radial_menu_description'),
+                    duration = 5000,
+                    position = 'center-right',
+                    type = 'error'
+                })
+            elseif Config.Notify == 'lation' then
+                exports.lation_ui:notify({
+                    title = locale('error.unsupported_radial_menu_title'),
+                    message = locale('error.unsupported_radial_menu_description'),
+                    type = 'error',
+                    duration = '5000',
+                    position = 'center-right'
+                })
+            end
+        end
     end
 
     local function oxUpdateRadial()
@@ -492,13 +537,25 @@ if Config.Framework == 'qbx' then
                 if VehicleType == 18 then
                     oxAddRadialLockboxOption()
                 else
-                    lib.removeRadialItem('open_lock_box')
+                    if Config.Radial == 'ox' then
+                        lib.removeRadialItem('open_lock_box')
+                    elseif Config.Radial == 'lation' then
+                        exports.lation_ui:removeRadialItem('open_lock_box')
+                    end
                 end
             else
-                lib.removeRadialItem('open_lock_box')
+                if Config.Radial == 'ox' then
+                    lib.removeRadialItem('open_lock_box')
+                elseif Config.Radial == 'lation' then
+                    exports.lation_ui:removeRadialItem('open_lock_box')
+                end
             end
         else
-            lib.removeRadialItem('open_lock_box')
+            if Config.Radial == 'ox' then
+                lib.removeRadialItem('open_lock_box')
+            elseif Config.Radial == 'lation' then
+                exports.lation_ui:removeRadialItem('open_lock_box')
+            end
         end
     end
 
@@ -607,10 +664,10 @@ if Config.Framework == 'qbx' then
             local VehicleType = GetVehicleClass(Vehicle)
             if VehicleType == 18 then
                 if qbxCheckValidPoliceJob() or qbxCheckValidAmbulanceJob() then
-                    if Config.qbxProgress.enabled then
-                        if Config.qbxProgress.type == 'ox_bar' then
+                    if Config.QbxProgress.enabled then
+                        if Config.QbxProgress.type == 'ox_bar' then
                             if lib.progressBar({
-                                    duration = Config.qbxProgress.duration,
+                                    duration = Config.QbxProgress.duration,
                                     label = locale('info.progress_label'),
                                     useWhileDead = false,
                                     canCancel = true,
@@ -641,9 +698,9 @@ if Config.Framework == 'qbx' then
                                     })
                                 end
                             end
-                        elseif Config.qbxProgress.type == 'ox_circle' then
+                        elseif Config.QbxProgress.type == 'ox_circle' then
                             if lib.progressCircle({
-                                    duration = Config.qbxProgress.duration,
+                                    duration = Config.QbxProgress.duration,
                                     label = locale('info.progress_label'),
                                     position = 'bottom',
                                     useWhileDead = false,
@@ -675,10 +732,10 @@ if Config.Framework == 'qbx' then
                                     })
                                 end
                             end
-                        elseif Config.qbxProgress.type == 'lation' then
+                        elseif Config.QbxProgress.type == 'lation' then
                             if exports.lation_ui:progressBar({
                                     label = locale('info.progress_label'),
-                                    duration = Config.qbxProgress.duration,
+                                    duration = Config.QbxProgress.duration,
                                     icon = 'fas fa-box-open',
                                     iconColor = '#FFFFFF',
                                     color = '#0000FF',
@@ -779,10 +836,4 @@ if Config.Framework == 'qbx' then
             end
         end
     end)
-
-    exports('OpenLockbox', function()
-        TriggerEvent('stark_lockbox:client:OpenLockbox')
-    end)
-    
-
 end

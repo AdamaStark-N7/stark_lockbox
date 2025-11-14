@@ -2,6 +2,8 @@
 
 if GetResourceState('qb-core') ~= 'started' or GetResourceState('qbx_core') == 'started' then return end
 
+local Config = require 'shared.config'
+
 local QBCore = exports['qb-core']:GetCoreObject()
 
 function qbCheckValidPoliceJob()

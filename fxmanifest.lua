@@ -10,7 +10,7 @@ name 'stark_lockbox'
 
 author 'Adama Stark'
 
-version '3.1.0'
+version '4.0.0'
 
 repository 'https://github.com/AdamaStark-N7/stark_lockbox'
 
@@ -19,7 +19,6 @@ description 'A Vehicle Lockbox Script for Qbox & QBCore'
 ox_lib 'locale'
 
 shared_scripts {
-    'config.lua',
     '@ox_lib/init.lua',
 }
 
@@ -34,6 +33,7 @@ server_scripts {
 }
 
 files {
+    'shared/config.lua',
     'locales/*.json',
 }
 
