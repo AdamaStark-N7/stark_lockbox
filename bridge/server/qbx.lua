@@ -30,3 +30,7 @@ lib.addCommand('lockbox', {
 }, function(source)
     TriggerClientEvent('stark_lockbox:client:OpenLockbox', source)
 end)
+
+RegisterNetEvent('QBCore:Server:OnPlayerUnload', function()
+    ox_inventory:ClearInventory('vehicle_lockbox')
+end)
