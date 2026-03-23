@@ -47,7 +47,7 @@ lib.addCommand('lockbox', {
     TriggerClientEvent('stark_lockbox:client:OpenLockbox', source)
 end)
 
-RegisterNetEvent('QBCore:Server:OnPlayerUnload', function()
+AddEventHandler('onServerResourceStop', function()
     if Config.Inventory == 'ox' then
         ox_inventory:ClearInventory('vehicle_lockbox')
     end
