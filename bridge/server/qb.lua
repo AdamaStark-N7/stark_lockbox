@@ -47,8 +47,10 @@ lib.addCommand('lockbox', {
     TriggerClientEvent('stark_lockbox:client:OpenLockbox', source)
 end)
 
-AddEventHandler('onServerResourceStop', function()
-    if Config.Inventory == 'ox' then
-        ox_inventory:ClearInventory('vehicle_lockbox')
+AddEventHandler('onResourceStart', function(resource)
+    if resource == GetCurrentResourceName() then
+        if Config.Inventory == 'ox' then
+            ox_inventory:ClearInventory('vehicle_lockbox')
+        end
     end
 end)
