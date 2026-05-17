@@ -19,7 +19,7 @@ return {
 
     Progress = {
         framework = 'qbx',  -- supported: 'qb', 'qbx', or 'esx'
-        enabled = true,
+        enabled = true,     -- True Enables Progress Functionality, False Disables It
         type = 'ox_circle', -- supported: 'qb', 'esx', 'ox_bar', 'ox_circle', or 'lation'
         duration = 2000
     },
