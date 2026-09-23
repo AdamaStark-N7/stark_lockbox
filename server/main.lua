@@ -1,9 +1,9 @@
-if not lib.checkDependency('ox_lib', '3.33.0', true) then return end
+if not lib.checkDependency('ox_lib', '3.39.0', true) then return end
 
 local Config = require 'shared.config'
 
 if Config.VersionCheck then
-    lib.versionCheck('AdamaStark-N7/stark_lockbox')
+    lib.versionCheck('Stark-Development-Studios/stark_lockbox')
 end
 
 Framework = nil
