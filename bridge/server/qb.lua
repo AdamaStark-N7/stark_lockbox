@@ -24,7 +24,11 @@ if Config.Inventory == 'qb' then
 end
 
 if Config.Inventory == 'ox' then
-    if not lib.checkDependency('ox_inventory', '2.47.9', true) then return end
+    if Config.EnforceCurrentVersion then
+        if not lib.checkDependency('ox_inventory', '2.47.9', true) then return end
+    else
+        lib.print.warn(locale('error.not_enforcing_current_version'))
+    end
 
     if oxInvState == 'started' and GetCurrentResourceName() then
         local lockbox = {

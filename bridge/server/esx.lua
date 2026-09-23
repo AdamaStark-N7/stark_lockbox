@@ -2,9 +2,13 @@ if GetResourceState('es_extended') ~= 'started' then return end
 
 if not lib.checkDependency('ox_lib', '3.39.0', true) then return end
 
-if not lib.checkDependency('ox_inventory', '2.47.9', true) then return end
-
 local Config = require 'shared.config'
+
+if Config.EnforceCurrentVersion then
+    if not lib.checkDependency('ox_inventory', '2.47.9', true) then return end
+else
+    lib.print.warn(locale('error.not_enforcing_current_version'))
+end
 
 local oxInvState = GetResourceState('ox_inventory')
 

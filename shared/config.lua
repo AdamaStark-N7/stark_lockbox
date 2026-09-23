@@ -9,6 +9,8 @@ return {
 
     VersionCheck = true,
 
+    EnforceCurrentVersion = false, -- Strongly Recommended That This Is Set To True; False Allows For Older Versions To Be Used
+
     Framework = 'qbx', -- supported: 'qb', 'qbx', or 'esx'
 
     Notify = 'ox',     -- supported: 'qb', 'esx', 'ox', or 'lation'

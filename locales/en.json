@@ -21,7 +21,8 @@
     "inventory_error_title": "Inventory Error",
     "inventory_error_description": "Ox Inventory Was Not Started Correctly!",
     "framework_mismatch_title": "Framework Mismatch",
-    "framework_mismatch_description": "The Frameworks Do Not Match In The Config!"
+    "framework_mismatch_description": "The Frameworks Do Not Match In The Config!",
+    "not_enforcing_current_version": "Enforce Current Version Is Set To False In The Config. It Is Strongly Recommended That This Is Set To True!"
   },
 
   "info": {
