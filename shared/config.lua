@@ -5,13 +5,11 @@
 ]]
 
 return {
-    Debug = true,
+    Debug = false,
 
     VersionCheck = true,
 
-    EnforceCurrentVersion = false, -- Strongly Recommended That This Is Set To True; False Allows For Older Versions To Be Used
-
-    Framework = 'qbx',             -- supported: 'qb', 'qbx', or 'esx'
+    EnforceCurrentVersion = false, -- Highly Recommended That This Is Set To True, False Allows For Older Versions To Be Used
 
     Notify = 'ox',                 -- supported: 'qb', 'esx', 'ox', or 'lation'
 
@@ -19,21 +17,28 @@ return {
 
     Radial = 'ox',                 -- supported: 'qb', 'ox', or 'lation'
 
+    Keybind = {
+        enabled = false,
+        control = 'RSHIFT' -- https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
+    },
+
     Progress = {
-        framework = 'qbx',  -- supported: 'qb', 'qbx', or 'esx'
-        enabled = true,     -- True Enables Progress Functionality, False Disables It
-        type = 'ox_circle', -- supported: 'qb', 'esx', 'ox_bar', 'ox_circle', or 'lation'
+        framework = 'qbx', -- supported: 'qb', 'qbx', or 'esx'
+        enabled = true,    -- True Enables Progress Functionality, False Disables It
+        type = 'ox_bar',   -- supported: 'qb', 'esx', 'ox_bar', 'ox_circle', or 'lation'
         duration = 2000
     },
 
     Menu = {
-        enabled = true, -- True Enables The Lockbox Menu, False Disables It
-        type = 'ox'     -- supported: 'qb', 'esx', 'ox', or 'lation'
+        enabled = false, -- True Enables The Lockbox Menu, False Disables It
+        type = 'ox'      -- supported: 'qb', 'esx', 'ox', or 'lation'
     },
 
-    LockboxSlots = 5,       -- Number of Inventory Slots
+    LockboxSlots = 6,       -- Number of Inventory Slots
 
     LockboxWeight = 120000, -- Max Inventory Weight
+
+    KeepInventory = true,   -- Ox Inventory Only: True Maintains What Is Stored In The Lockbox; False Clears The Inventory When The Script Is Restarted
 
     PoliceJobs = {
         'police',
@@ -41,6 +46,7 @@ return {
         'lscso',
         'sasp',
         'sast',
+        'sahp',
         -- add your server's police job here
     },
 

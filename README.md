@@ -54,7 +54,7 @@ Stark Lockbox is a resource that allows both LEO & EMS to utilize a locking stor
 # Features
 
 1. Unique Lockboxes for LEO or EMS to use in their vehicles.
-2. Accessable by using the selected radial menu.
+2. Lockboxes are accessed by either using the selected radial menu or via a configurable keybind.
 
 # Supported Frameworks
 
@@ -65,12 +65,18 @@ Stark Lockbox is a resource that allows both LEO & EMS to utilize a locking stor
 # Dependencies
 
 1. [ox_lib](https://github.com/overextended/ox_lib/releases)
-2. [qb-radialmenu](https://github.com/qbcore-framework/qb-radialmenu) (QB)
+2. [qb-radialmenu](https://github.com/qbcore-fivem/qb-radialmenu) (QB)
 3. [qbx_radialmenu](https://github.com/Qbox-project/qbx_radialmenu) (QBX)
 4. Built In Ox Lib Radial Menu (QB, QBX, ESX)
 5. Lation Modern UI Radial Menu (QB, QBX, ESX)
-6. [qb-inventory](https://github.com/qbcore-framework/qb-inventory) or [ps-inventory](https://github.com/Project-Sloth/ps-inventory) (QB)
+6. [qb-inventory](https://github.com/qbcore-fivem/qb-inventory) or [ps-inventory](https://github.com/Project-Sloth/ps-inventory) (QB)
 7. [ox_inventory](https://github.com/overextended/ox_inventory/releases) (QBX or ESX)
+
+# Developer's Notes
+
+- The script now features a configurable option to not enforce the current version of Ox Inventory as released by the Overextended team. The purpose of this option is to allow server owners to still be able to use this resource with older versions of Ox Inventory, or to use this resource with versions of Ox Inventory that were customized by a third party which feature custom UIs and/or custom functionalities. It is still strongly recommended by us to use the latest version of Ox Inventory for server security purposes, bug fixes, new functionalities, and overall player experience.
+
+- For Ox Inventory only, the script now features a configurable option to allow both LEOs and EMS to keep what is currently stored in their vehicle lockboxes. Previously after a server restart, the lockbox inventory would be wiped for purposes of roleplay realism. Now the option to clear the inventory is configurable by the server owner to allow both LEOs and EMS to keep what is stored in their vehicle lockboxes. This is useful for servers that allow both LEOs and EMS to own their own emergency vehicles, while the previous option was for emergency vehicles that were spawned server side, but they were not owned by the player.
 
 # Coming Soon
 

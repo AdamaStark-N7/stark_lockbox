@@ -22,7 +22,8 @@
     "inventory_error_description": "Ox Inventory Was Not Started Correctly!",
     "framework_mismatch_title": "Framework Mismatch",
     "framework_mismatch_description": "The Frameworks Do Not Match In The Config!",
-    "not_enforcing_current_version": "Enforce Current Version Is Set To False In The Config. It Is Strongly Recommended That This Is Set To True!"
+    "current_version_not_enforced": "Enforce Current Version Is Set To False In The Config. It Is Strongly Recommended That This Be Set To True!",
+    "keep_inventory_not_enabled": "Keep Inventory Is Set To False In The Config. You Can Set It To True To Maintain The Lockbox's Inventory!"
   },
 
   "info": {
@@ -35,7 +36,9 @@
     "open_vehicle_lockbox_option_description": "Opens The Secured Vehicle Lockbox",
     "close_vehicle_lockbox_option_description": "Closes The Secured Vehicle Lockbox",
     "progress_name": "open_lock_box",
-    "progress_label": "Opening Lockbox..."
+    "progress_label": "Opening Lockbox...",
+    "keybind_name": "open_lock_box",
+    "keybind_description": "Press To Open An Emergency Vehicle's Lockbox."
   },
 
   "success": {
